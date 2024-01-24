@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Cartographie en ligne</title>
+<style type="text/css"> 
+<!-- 
+body  {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; /* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+	padding: 0;
+	text-align: center; /* this centers the container in IE 5* browsers. The text is then set to the left aligned default in the #container selector */
+	color: #000000;
+}
+
+/* Tips for Elastic layouts 
+1. Since the elastic layouts overall sizing is based on the user's default fonts size, they are more unpredictable. Used correctly, they are also more accessible for those that need larger fonts size since the line length remains proportionate.
+2. Sizing of divs in this layout are based on the 100% font size in the body element. If you decrease the text size overall by using a font-size: 80% on the body element or the #container, remember that the entire layout will downsize proportionately. You may want to increase the widths of the various divs to compensate for this.
+3. If font sizing is changed in differing amounts on each div instead of on the overall design (ie: #sidebar1 is given a 70% font size and #mainContent is given an 85% font size), this will proportionately change each of the divs overall size. You may want to adjust based on your final font sizing.
+*/
+.twoColElsLtHdr #container { 
+	width: 46em;  /* this width will create a container that will fit in an 800px browser window if text is left at browser default font sizes */
+	background: #FFFFFF;
+	margin: 0 auto; /* the auto margins (in conjunction with a width) center the page */
+	border: 1px solid #000000;
+	text-align: left; /* this overrides the text-align: center on the body element. */
+} 
+.twoColElsLtHdr #header { 
+	background: #DDDDDD; 
+	padding: 0 10px;  /* this padding matches the left alignment of the elements in the divs that appear beneath it. If an image is used in the #header instead of text, you may want to remove the padding. */
+} 
+.twoColElsLtHdr #header h1 {
+	margin: 0; /* zeroing the margin of the last element in the #header div will avoid margin collapse - an unexplainable space between divs. If the div has a border around it, this is not necessary as that also avoids the margin collapse */
+	padding: 10px 0; /* using padding instead of margin will allow you to keep the element away from the edges of the div */
+}
+
+/* Tips for sidebar1:
+1. Be aware that if you set a font-size value on this div, the overall width of the div will be adjusted accordingly.
+2. Since we are working in ems, it's best not to use padding on the sidebar itself. It will be added to the width for standards compliant browsers creating an unknown actual width. 
+3. Space between the side of the div and the elements within it can be created by placing a left and right margin on those elements as seen in the ".twoColElsLtHdr #sidebar1 p" rule.
+*/
+.twoColElsLtHdr #sidebar1 {
+	float: left; 
+	width: 12em; /* since this element is floated, a width must be given */
+	background: #EBEBEB; /* the background color will be displayed for the length of the content in the column, but no further */
+	padding: 15px 0; /* top and bottom padding create visual space within this div */
+}
+.twoColElsLtHdr #sidebar1 h3, .twoColElsLtHdr #sidebar1 p {
+	margin-left: 10px; /* the left and right margin should be given to every element that will be placed in the side columns */
+	margin-right: 10px;
+}
+
+/* Tips for mainContent:
+1. If you give this #mainContent div a font-size value different than the #sidebar1 div, the margins of the #mainContent div will be based on its font-size and the width of the #sidebar1 div will be based on its font-size. You may wish to adjust the values of these divs.
+2. The space between the mainContent and sidebar1 is created with the left margin on the mainContent div.  No matter how much content the sidebar1 div contains, the column space will remain. You can remove this left margin if you want the #mainContent div's text to fill the #sidebar1 space when the content in #sidebar1 ends.
+3. To avoid float drop, you may need to test to determine the approximate maximum image/element size since this layout is based on the user's font sizing combined with the values you set. However, if the user has their browser font size set lower than normal, less space will be available in the #mainContent div than you may see on testing.
+4. In the Internet Explorer Conditional Comment below, the zoom property is used to give the mainContent "hasLayout." This avoids several IE-specific bugs that may occur.
+*/
+.twoColElsLtHdr #mainContent {
+	margin: 0 1.5em 0 13em; /* the right margin can be given in ems or pixels. It creates the space down the right side of the page. */
+} 
+.twoColElsLtHdr #footer { 
+	padding: 0 10px; /* this padding matches the left alignment of the elements in the divs that appear above it. */
+	background:#DDDDDD;
+} 
+.twoColElsLtHdr #footer p {
+	margin: 0; /* zeroing the margins of the first element in the footer will avoid the possibility of margin collapse - a space between divs */
+	padding: 10px 0; /* padding on this element will create space, just as the the margin would have, without the margin collapse issue */
+}
+
+/* Miscellaneous classes for reuse */
+.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class should be placed on a div or break element and should be the final element before the close of a container that should fully contain a float */
+	clear:both;
+    height:0;
+    font-size: 1px;
+    line-height: 0px;
+}
+--> 
+</style><!--[if IE]>
+<style type="text/css"> 
+/* place css fixes for all versions of IE in this conditional comment */
+.twoColElsLtHdr #sidebar1 { padding-top: 30px; }
+.twoColElsLtHdr #mainContent { zoom: 1; padding-top: 15px; }
+/* the above proprietary zoom property gives IE the hasLayout it needs to avoid several bugs */
+</style>
+<![endif]--></head>
+
+<body class="twoColElsLtHdr">
+
+<div id="container">
+  <div id="header">
+    <marquee><h2 align="center">Bienvenue dans la cartographie en ligne</h2></marquee>
+    <!-- end #header --></div>
+  <div id="sidebar1">
+    <h3>Carte chlorophlethe du Senegal</h3>
+    <p>Ici nous vous presentons les differentes regions de la republuque du Senegal.</p>
+    <p>Surnomme le pays de la TERANGA,le Senegal est un pays sans aucun egale dans le monde en terme d'accueil chaleureux.</p>
+    <p>Votre bien etre est surtout notre priorite.</p>
+    <p>Par ailleurs au cour de nos excapades que chaque region a sa particularite.</p>
+    <p>Vous pouvez sur la regions qui vous interesse et on vas vous y diriger.</p>
+    <p>Bonne visite</p>
+  <!-- end #sidebar1 --></div>
+  <div id="mainContent">
+    <h2 align="center">La cartographie du Sénégal</h2>
+    <p><img src="../image/senegal-political.jpg" alt="Sénégal" width="494" height="743" border="0" usemap="#Map" />
+      <map name="Map" id="Map">
+        <area shape="poly" coords="95,156,112,154,120,139,131,119,143,117,152,131,160,144,166,133,191,136,210,133,229,139,236,142,243,160,250,193,264,189,271,169,285,146,299,131,303,116,290,116,281,105,273,91,257,69,241,58,223,62,208,58,200,62,187,69,173,68,158,79,146,78,129,78,117,73,111,77,103,98,96,115,94,140" href="saintlouis.html" target="_blank" />
+        <area shape="poly" coords="92,157,86,174,79,188,79,197,77,208,82,220,88,232,93,221,101,212,109,213,109,227,115,241,119,252,139,247,151,259,164,265,174,273,182,285,198,295,208,286,221,297,238,302,245,295,257,279,251,264,248,249,240,238,245,214,248,210,247,189,244,159,233,141,214,136,165,138,158,141,142,117,117,148,105,157" href="louga.html" target="_blank" />
+      <area shape="poly" coords="250,192,245,214,241,238,250,250,254,269,258,281,250,289,264,302,293,317,302,319,312,318,324,309,336,294,364,299,381,290,387,253,378,236,367,225,362,203,355,189,344,185,333,154,329,137,321,122,306,119,295,130,280,153,266,181,259,191" href="matam.html" target="_blank" />
+      <area shape="poly" coords="254,292,272,305,299,318,319,314,336,298,367,299,380,283,386,268,379,238,391,246,398,263,412,277,416,286,414,310,422,320,429,333,430,347,431,363,435,374,428,390,427,401,434,413,439,423,442,435,451,435,459,431,466,447,471,464,479,475,478,498,474,519,480,539,465,542,444,548,427,547,410,557,394,549,377,539,361,530,353,538,341,521,325,514,322,505,302,440,293,414,282,411,257,426,240,408,224,408,219,396,216,387,230,370,235,339,234,306,244,300" href="tambacounda.html" target="_blank" />
+      <area shape="poly" coords="176,281,194,297,208,288,234,305,230,367,218,395,198,391,180,387,166,416,129,410,121,394,114,376,108,353,104,343,115,324,119,331,130,353,144,349,146,321,158,301" href="kaolack.html" target="_blank" />
+      </map>
+    </p>
+  <!-- end #mainContent --></div>
+	<!-- This clearing element should immediately follow the #mainContent div in order to force the #container div to contain all child floats --><br class="clearfloat" />
+   <div id="footer">
+    <p>Footer</p>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>

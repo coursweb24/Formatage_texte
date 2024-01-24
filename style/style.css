@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+#menubar {
+	height: 40px;
+	background-color: #99CC00;
+}
+.img-left {
+	float: left;
+	height: 202px;
+	width: 420px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.img-left {
+	padding: 0px;
+	float: left;
+	height: 202px;
+	width: 420px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.img-right {
+	padding: 0px;
+	float: right;
+	height: 300px;
+	width: 480px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+.style1 a {
+	color: #FFFFFF;
+}
